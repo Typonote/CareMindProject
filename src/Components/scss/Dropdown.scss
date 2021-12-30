@@ -1,0 +1,11 @@
+.DropDown__Container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+
+  .DropDown__Link {
+    padding: 0.5rem;
+  }
+}
