@@ -11,6 +11,7 @@
   align-items: center;
   align-content: center;
   padding: 0.5rem;
+  z-index: 99;
 
   .Hamburger__Button {
     padding-left: 1rem;
@@ -27,6 +28,7 @@
 
   .Nav__Logo {
     font-size: 2rem;
+    font-weight: 700;
   }
 
   .Nav__Menu {

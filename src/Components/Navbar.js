@@ -6,7 +6,7 @@ const Navbar = ({ toggle }) => {
   return (
     <nav className="Navbar__Container" role="navigation">
       <Link to="/" className="Nav__Logo">
-        Kim Jinkyung
+        Afoter
       </Link>
 
       <div className="Hamburger__Button" onClick={toggle}>
@@ -27,13 +27,12 @@ const Navbar = ({ toggle }) => {
       </div>
 
       <div className="Nav__Menu">
-        <Link to="/" style={{ marginRight: "0.5rem" }}>
+        <Link to="/" style={{ marginRight: "1rem" }}>
           Home
         </Link>
-        <Link to="/list" style={{ marginRight: "0.5rem" }}>
-          List
+        <Link to="/login" style={{ marginRight: "1rem" }}>
+          Login
         </Link>
-        <Link to="/login">Login</Link>
       </div>
     </nav>
   );

@@ -5,7 +5,6 @@ import "./App.scss";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import Home from "./Pages/Home";
-import List from "./Pages/List";
 import Login from "./Pages/Login";
 
 function App() {
@@ -36,7 +35,6 @@ function App() {
       <Dropdown isOpen={isOpen} toggle={toggle} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/list" element={<List />} />
         <Route path="/login" element={<Login />} />
       </Routes>
       <Footer />
