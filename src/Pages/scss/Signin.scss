@@ -1,4 +1,4 @@
-.Login__Container {
+.Signin__Container {
   background-color: white;
   height: 77.5vh;
   display: flex;
@@ -7,15 +7,11 @@
   align-items: center;
 }
 
-.Login__Wrapper {
+.Signin__Wrapper {
   max-width: 55rem;
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
   background-color: white;
   border-radius: 0.5rem;
   overflow: hidden;
@@ -30,10 +26,11 @@
   }
 }
 
-.Login__Image__Card {
+.Image__Card {
   display: block;
   width: 50%;
   background-size: cover;
+  background-color: yellowgreen;
 
   @media screen and (max-width: 1024px) {
     display: none;
@@ -45,7 +42,7 @@
   }
 }
 
-.Login__Card {
+.Signin__Card {
   width: 50%;
   padding: 2rem;
 
@@ -110,7 +107,7 @@
   margin-top: 2rem;
 }
 
-.Login__Button {
+.Signin__Button {
   background-color: rgb(255, 80, 116);
   border: none;
   color: white;

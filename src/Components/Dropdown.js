@@ -10,11 +10,11 @@ const Dropdown = ({ isOpen, toggle }) => {
           <Link to="/" className="DropDown__Link">
             Home
           </Link>
-          <Link to="/list" className="DropDown__Link">
-            List
+          <Link to="/signin" className="DropDown__Link">
+            SignIn
           </Link>
           <Link to="/login" className="DropDown__Link">
-            Login
+            LogIn
           </Link>
         </div>
       ) : null}

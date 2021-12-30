@@ -30,8 +30,11 @@ const Navbar = ({ toggle }) => {
         <Link to="/" style={{ marginRight: "1rem" }}>
           Home
         </Link>
+        <Link to="/signin" style={{ marginRight: "1rem" }}>
+          SignIn
+        </Link>
         <Link to="/login" style={{ marginRight: "1rem" }}>
-          Login
+          LogIn
         </Link>
       </div>
     </nav>
