@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import "Pages/scss/Signin.scss";
 import SignImage from "Assets/img/SignIn.jpg";
@@ -123,7 +124,8 @@ const Signin = () => {
               className="Validation__Input"
               style={{ resize: "none", height: "6rem" }}
               rows="3"
-              maxlength="512"
+              cols="171"
+              maxLength="512"
             />
           </div>
           <div className="Button__Container">

@@ -1,4 +1,5 @@
 @import "/src/Variables/scss/mixins";
+@import "/src/Variables/scss/variables";
 
 .Button__Top {
   position: fixed;
@@ -9,7 +10,7 @@
   font-size: 3rem;
   z-index: 1;
   cursor: pointer;
-  color: rgb(255, 80, 116);
+  color: $AfoterRed;
 
   @include responsive("md") {
     margin-right: 0.1em;

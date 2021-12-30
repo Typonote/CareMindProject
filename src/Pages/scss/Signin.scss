@@ -1,3 +1,5 @@
+@import "/src/Variables/scss/variables";
+
 .Signin__Container {
   background-color: white;
   height: 77.5vh;
@@ -84,7 +86,7 @@
 
     &:focus {
       outline: 2px solid transparent;
-      box-shadow: 0 0 0 3px rgb(255, 80, 116);
+      box-shadow: 0 0 0 3px $AfoterRed;
     }
   }
 
@@ -97,7 +99,7 @@
   .Error__Message {
     margin: 0.5rem;
     font-size: 0.8rem;
-    color: rgb(255, 80, 116);
+    color: $AfoterRed;
   }
 }
 
@@ -108,7 +110,7 @@
 }
 
 .Signin__Button {
-  background-color: rgb(255, 80, 116);
+  background-color: $AfoterRed;
   border: none;
   color: white;
   font-weight: 700;
@@ -122,6 +124,6 @@
   }
 
   &:hover {
-    background-color: darken($color: rgb(255, 80, 116), $amount: 10%);
+    background-color: darken($color: $AfoterRed, $amount: 10%);
   }
 }

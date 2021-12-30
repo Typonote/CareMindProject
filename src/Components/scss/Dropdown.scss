@@ -1,4 +1,7 @@
 .DropDown__Container {
+  position: sticky;
+  top: 8vh;
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-content: center;

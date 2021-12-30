@@ -3,13 +3,17 @@ import "Pages/scss/Login.scss";
 import LoginImage from "Assets/img/SignIn.jpg";
 import { AuthApi } from "Api/AuthApi";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
 
 const Login = () => {
+  const [type, setType] = useState("U");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
+
+  const onChangeTypehandler = (e) => {
+    setType(e.target.value);
+  };
 
   const onChangeEmailhandler = (e) => {
     setEmail(e.target.value);
@@ -21,28 +25,26 @@ const Login = () => {
 
   function onClickSubmitHandler(e) {
     e.preventDefault();
-    AuthApi.Request_Login("/api/authentication", {
-      userType: "u",
+    AuthApi.Request_Login("/data/data.json", {
+      userType: type,
       emailAddr: email,
       passCode: password,
     })
+      .then((response) => response.json())
       .then((response) => {
-        const [Token, LogIn] = [response.data.token, response.data.logIn];
+        console.log(response.data[0]);
+        const [Token, LogIn] = [
+          response.data[0].token,
+          response.data[0].isLogin,
+        ];
 
         // eslint-disable-next-line no-unused-expressions
         LogIn === "true"
-          ? (localStorage.setItem("access_token", Token),
-            toast.success("로그인 성공!", {
-              position: toast.POSITION.TOP_CENTER,
-              autoClose: 2500,
-            }),
-            navigate("/"))
+          ? (localStorage.setItem("token", Token), navigate("/"))
           : alert("error");
       })
       .catch((error) => {
-        toast.error("로그인 실패", {
-          autoClose: 2500,
-        });
+        alert("error");
       });
   }
 
@@ -53,6 +55,38 @@ const Login = () => {
           <img src={LoginImage} alt="" />
         </div>
         <form className="Login__Card">
+          <div className="Validation__Container">
+            <div className="Validation__Text-box">
+              <p className="Validation__Text">유저타입</p>
+            </div>
+            <div className="Radio__Container">
+              <label htmlFor="user" className="Validation__Text">
+                유저
+              </label>
+              <input
+                className="Type__Radio"
+                type="radio"
+                id="user"
+                value="U"
+                name="type"
+                onClick={onChangeTypehandler}
+                defaultChecked
+              />
+              <label htmlFor="admin" className="Validation__Text">
+                관리자
+              </label>
+              <input
+                className="Type__Radio"
+                type="radio"
+                id="admin"
+                value="P"
+                name="type"
+                onChange={onChangeTypehandler}
+                s
+              />
+            </div>
+          </div>
+
           <div className="Validation__Container">
             <div className="Validation__Text-box">
               <label className="Validation__Text">이메일</label>
