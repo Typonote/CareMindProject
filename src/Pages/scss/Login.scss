@@ -1,4 +1,5 @@
 @import "/src/Variables/scss/variables";
+@import "/src/Variables/scss/mixins";
 .Login__Container {
   background-color: white;
   height: 77.5vh;
@@ -22,11 +23,11 @@
   overflow: hidden;
   box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 
-  @media screen and (max-width: 1024px) {
+  @include responsive("lg") {
     max-width: 24rem;
   }
 
-  @media screen and (max-width: 768px) {
+  @include responsive("md") {
     width: 90%;
   }
 }
@@ -36,7 +37,7 @@
   width: 50%;
   background-size: cover;
 
-  @media screen and (max-width: 1024px) {
+  @include responsive("lg") {
     display: none;
   }
 
@@ -50,7 +51,7 @@
   width: 50%;
   padding: 2rem;
 
-  @media screen and (max-width: 1024px) {
+  @include responsive("lg") {
     width: 100%;
   }
 }
@@ -90,7 +91,7 @@
     padding: 0.5rem 1rem;
     appearance: none;
 
-    @media screen and (max-width: 768px) {
+    @include responsive("md") {
       width: 90%;
     }
 
