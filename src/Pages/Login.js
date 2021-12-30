@@ -32,7 +32,6 @@ const Login = () => {
     })
       .then((response) => response.json())
       .then((response) => {
-        console.log(response.data[0]);
         const [Token, LogIn] = [
           response.data[0].token,
           response.data[0].isLogin,

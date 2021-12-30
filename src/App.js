@@ -19,7 +19,6 @@ function App() {
     const hideMenu = () => {
       if (window.innerWidth > 760 && isOpen) {
         setIsOpen(false);
-        console.log("resize");
       }
     };
 
